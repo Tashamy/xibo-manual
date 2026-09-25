@@ -27,6 +27,7 @@ When using images, follow our recommendations for best results:
 When an image is shown, the physical space the image takes up in memory is far greater than the size of the file, the majority of file containers use compression to reduce the file size.
 
 **Example**: *A JPEG image with a resolution of 2160 x 3840 at 600 dpi (which is common for printed media) shown without any sampling, would take -24 MB of memory to paint on the screen. If a graphics package were used to drop the resolution to 1080 x 1920 at 96 dpi, it would only take 6 MB of memory to open.*
+{/tip}
 
 ## Webpage Images
 

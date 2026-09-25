@@ -38,4 +38,4 @@ Override individual Displays from the Displays grid. Click to Edit and use the S
 
 ***Can I use Portrait Displays?***
 
-Android can control rotation if your device supports screen rotation. Orientation can be selected from the appropriate Display Settings profile using the Location tab. 
+Android, webOS and Tizen can control rotation if your device supports screen rotation. Orientation can be selected from the appropriate Display Settings profile using the Location tab. 

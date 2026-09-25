@@ -13,7 +13,7 @@ Configure a set of commands for users to select and send via the CMS, schedule f
 
 Create commands to apply for all Players or create command strings per Players, particularly useful if your have a mixed network.
 
-Commands provide easy access to functionality for RS232, Android Intents and Philips SoC (system on chip)!
+Commands provide easy access to functionality for RS232 and Android Intents.
 
 ## Creating Commands
 
@@ -31,10 +31,6 @@ Command strings can have parameters separated by the | pipe character, e.g. mute
 ### Helpers
 
 Command Helpers are prefixes that can be added to the Command String in order to take a more advanced action. Commands without a prefix are executed in the shell of the operating system which runs the Player. `cmd.exe` on Windows and `shell` on Android.
-
-{tip}
-Use command timezone|ID where <ID> would be the database name for the timezone you wish to switch to: [Time Zone database names for Android](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
-{/tip}
 
 ### Validation
 
@@ -90,9 +86,15 @@ See the Device Compatibility sheet for full information.
 Ask your administrator for further information regarding device compatibility.
 {/white}
 
+### HTTP
+
+HTTP commands allow triggering or interacting with web based endpoints by defining pre-set commands to make HTTP calls to external services (such as a queue management counter or a sensor) to trigger Layout changes, durations of widgets or activate conditional content in real time.
+
+Commands can be triggered on demand via XMR, scheduled at specific dates/times or tied to an interactive touch or click action on a Layout.
+
 ### RS232
 
-Industry grade monitors often have a serial interface for turning the monitor panel on and off. [[PRODUCTNAME]] can use the RS232 Command helper to send these Commands by using the  `rs232` prefix in the Command String. The format of the command is `rs232|<connection string>|<command>`.
+Commercial displays often have a serial interface for turning the monitor panel on and off. [[PRODUCTNAME]] can use the RS232 Command helper to send these Commands by using the  `rs232` prefix in the Command String. The format of the command is `rs232|<connection string>|<command>`.
 
 The connection string should be provided in the following format on Windows:
 
@@ -167,7 +169,7 @@ intent|broadcast|activity|[{ "name": "timeon", "type": "intArray", "value": [201
 
 
 
-Commands containing an intent helper are ignored in the Windows Player!
+Commands containing an intent helper are only available on devices running the Android operating system.
 
 ## Adding Commands to the CMS
 
@@ -213,7 +215,7 @@ A Shell Command can also be a Command String with options for all Players provid
 
 ## HDMI-CEC
 
-HDMI-CEC is a bus that is implemented on nearly all new large-screen TVs that have HDMI connectors. This bus (which is physically connected within normal HDMI cables) supports control signals that can perform power-on, power off, volume adjusts, selection of video source and many of the features that are accessible via the TV’s remote control. It can also control most other hardware on the HDMI bus.
+HDMI-CEC is a bus that is implemented on nearly all new large-screen commercial displays that have HDMI connectors. This bus (which is physically connected within normal HDMI cables) supports control signals that can perform power-on, power off, volume adjusts, selection of video source and many of the features that are accessible via the remote control. It can also control most other hardware on the HDMI bus.
 
 [[PRODUCTNAME]] doesn’t provide a direct interface to HDMI-CEC as there are many different manufacturer specifications, however, it is possible to control HDMI-CEC via a batch file.
 
